@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apni Ride</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5f6f8;font-family:Arial,sans-serif;color:#202124}
+header{background:#ffd21f;padding:22px 18px;border-radius:0 0 24px 24px}
+h1{margin:0;font-size:28px}
+header p{margin:7px 0 0}
+main{padding:18px}
+.card{background:white;padding:18px;border-radius:18px;margin-bottom:16px;box-shadow:0 3px 12px #0000000d}
+label{display:block;font-weight:bold;margin:12px 0 6px}
+input,select{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;font-size:16px;background:white}
+button{width:100%;padding:15px;border:0;border-radius:12px;background:#202124;color:white;font-size:17px;font-weight:bold;margin-top:16px}
+.note{font-size:13px;color:#666;line-height:1.5}
+#result{margin-top:14px;font-weight:bold}
+</style>
+</head>
+<body>
+<header>
+<h1>🏍️ Apni Ride</h1>
+<p>आपकी सवारी, आपकी सुविधा</p>
+<p>Ambikapur, Chhattisgarh</p>
+</header>
+<main>
+<div class="card">
+<h2>कहाँ जाना है?</h2>
+<label for="pickup">Pickup स्थान</label>
+<input id="pickup" placeholder="अपना Pickup स्थान लिखें">
+<label for="destination">Destination</label>
+<input id="destination" placeholder="कहाँ जाना चाहते हैं?">
+<label for="vehicle">वाहन चुनें</label>
+<select id="vehicle">
+<option value="bike">Bike</option>
+<option value="car">Car (जल्द उपलब्ध)</option>
+</select>
+<button onclick="bookRide()">राइड बुक करें</button>
+<div id="result"></div>
+<p class="note">यह शुरुआती डेमो है। अभी असली ड्राइवर, GPS, भुगतान या ऑनलाइन बुकिंग सेवा जुड़ी नहीं है।</p>
+</div>
+</main>
+<script>
+function bookRide(){
+const p=document.getElementById('pickup').value.trim();
+const d=document.getElementById('destination').value.trim();
+const v=document.getElementById('vehicle').value;
+const r=document.getElementById('result');
+if(!p||!d){r.textContent='कृपया Pickup और Destination दोनों भरें।';return;}
+if(v==='car'){r.textContent='Car बुकिंग अभी उपलब्ध नहीं है।';return;}
+r.textContent='डेमो: '+p+' से '+d+' तक Bike राइड का अनुरोध तैयार है। अभी असली बुकिंग नहीं हुई है।';
+}
+</script>
+</body>
+</html>
