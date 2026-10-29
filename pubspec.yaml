@@ -1,4 +1,10 @@
-name: apni_ride
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+    firebase_core: ^3.13.0
+  cloud_firestore: ^5.6.7
+  name: apni_ridedependencies:
 description: Apni Ride bike booking app
 publish_to: 'none'
 version: 1.0.0+1
