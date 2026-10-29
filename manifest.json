@@ -1,9 +1,8 @@
 
 {
-  "id": "./",
   "name": "Apni Ride",
   "short_name": "Apni Ride",
-  "description": "Ambikapur ride booking app",
+  "description": "Ambikapur Ride Booking App",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
